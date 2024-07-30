@@ -1,0 +1,22 @@
+.alert {
+	padding: 0.625em 1.25em;
+	width: max-content;
+	border-radius: 0.375em;
+	border: 1px solid transparent;
+	z-index: 600;
+	transition: transform var(--transition-timing);
+}
+.alert--success {
+	color: var(--color-success-500);
+	background-color: var(--color-success-100);
+	border-color: var(--color-success-100);
+}
+.alert--danger {
+	color: var(--color-danger-400);
+	background-color: var(--color-danger-100);
+	border-color: var(--color-danger-100);
+}
+
+.alert.show {
+	transform: translateY(0);
+}

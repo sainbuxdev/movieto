@@ -1,0 +1,23 @@
+.header-wrapper {
+	--opacity: 0.9;
+	z-index: 500;
+	background-color: rgba(var(--color-body-bg), var(--opacity));
+	backdrop-filter: blur(15px);
+}
+.header {
+	justify-content: space-between;
+	height: var(--header-height);
+}
+
+.logo {
+	color: var(--color-primary);
+	font-weight: 700;
+	font-size: 2rem;
+	margin-right: 10rem;
+}
+
+@media screen and (min-width: 768px) {
+	.header {
+		justify-content: flex-start;
+	}
+}

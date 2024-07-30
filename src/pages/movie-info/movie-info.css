@@ -1,0 +1,44 @@
+.movie-info__name {
+	font-size: 3rem;
+	color: var(--color-primary);
+}
+
+.movie-info__launch-date {
+	font-size: 1.3rem;
+	color: var(--color-gray-600);
+}
+
+.movie-info-detail-card {
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.movie-info__img {
+	display: none;
+	/* box-shadow: 0 10px 20px -2px rgba(0, 0, 0, 0.1); */
+}
+
+.movie-info__rating {
+	color: var(--color-gray-600);
+	margin-bottom: 1em;
+}
+
+.movie-info__link {
+	color: var(--color-gray-600);
+	text-decoration: underline currentColor solid 1px;
+	display: block;
+	margin-bottom: 1em;
+}
+
+@media screen and (min-width: 768px) {
+	.movie-info-detail-card {
+		grid-template-columns: minmax(50ch, 85ch) minmax(25%, 220px);
+		gap: 4rem;
+
+		align-items: flex-start;
+	}
+
+	.movie-info__img {
+		display: block;
+	}
+}

@@ -1,0 +1,39 @@
+.form-group {
+	position: relative;
+	gap: 0.8rem;
+}
+
+.form-group::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 2px;
+	background-color: var(--color-primary);
+}
+
+.form__input-label {
+	font-size: 1.5rem;
+	font-weight: 500;
+}
+
+.form__input-field {
+	border: 0;
+	padding: 0.5rem 0;
+	background-color: transparent;
+	color: inherit;
+}
+
+.form__input-field:focus {
+	outline: none;
+}
+
+.form__input-error {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	font-size: 1.3rem;
+	line-height: 1.2;
+	color: var(--color-danger-200);
+}

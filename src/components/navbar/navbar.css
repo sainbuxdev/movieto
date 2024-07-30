@@ -1,0 +1,6 @@
+.navlist {
+	list-style-type: none;
+	gap: 3rem;
+
+	/* border: 1px solid blue; */
+}

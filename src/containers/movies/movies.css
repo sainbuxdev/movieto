@@ -1,0 +1,31 @@
+#movies-list {
+	scroll-margin: var(--header-height);
+}
+
+/* .movies {
+	--column-count: 2;
+	--card-width: 17rem;
+	grid-template-columns: repeat(
+		var(--column-count),
+		minmax(15rem, var(--card-width))
+	);
+	gap: 5rem 2rem;
+}
+
+@media screen and (min-width: 600px) {
+	.movies {
+		--column-count: 3;
+		column-gap: 4rem;
+	}
+}
+@media screen and (min-width: 860px) {
+	.movies {
+		--column-count: 4;
+		column-gap: 4rem;
+	}
+}
+@media screen and (min-width: 1100px) {
+	.movies {
+		--column-count: 5;
+	}
+} */

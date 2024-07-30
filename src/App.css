@@ -1,0 +1,569 @@
+#root {
+	min-height: 100vh;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+	list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+	max-width: 100%;
+	display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* general classes about section max width and centering */
+.max-fw {
+	max-width: var(--fixed-width);
+	width: 90%;
+}
+
+.mg-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* general classes for padding */
+
+.padx-05x {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
+}
+.padx-01x {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+.padx-15x {
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+.padx-20x {
+	padding-left: 2rem;
+	padding-right: 2rem;
+}
+.padx-25x {
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+}
+.padx-30x {
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.pady-05x {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+.pady-01x {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+.pady-15x {
+	padding-top: 1.5rem;
+	padding-bottom: 1.5rem;
+}
+.pady-20x {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+}
+.pady-25x {
+	padding-top: 2.5rem;
+	padding-bottom: 2.5rem;
+}
+.pady-30x {
+	padding-top: 3rem;
+	padding-bottom: 3rem;
+}
+
+.pady-app-top {
+	--pady-app-top: calc(var(--header-height) + 3rem);
+	padding-top: var(--pady-app-top);
+	padding-bottom: var(--pady-app-top);
+}
+
+.md-padx-1x {
+	--pad-x: 1rem;
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
+}
+.md-padx-2x {
+	--pad-x: 2rem;
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
+}
+.md-padx-3x {
+	--pad-x: 3rem;
+	padding-left: var(--pad-x);
+	padding-right: var(--pad-x);
+}
+
+.md-pady-1x {
+	--pad-y: 1rem;
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
+}
+.md-pady-2x {
+	--pad-y: 2rem;
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
+}
+.md-pady-3x {
+	--pad-y: 3rem;
+	padding-top: var(--pad-y);
+	padding-bottom: var(--pad-y);
+}
+
+@media screen and (min-width: 768px) {
+	.md-padx-1x {
+		--pad-x: 2rem;
+	}
+	.md-padx-2x {
+		--pad-x: 4rem;
+	}
+	.md-padx-3x {
+		--pad-x: 6rem;
+	}
+
+	.md-pady-1x {
+		--pad-y: 2rem;
+	}
+	.md-pady-2x {
+		--pad-y: 4rem;
+	}
+	.md-pady-3x {
+		--pad-y: 6rem;
+	}
+}
+@media screen and (min-width: 1100px) {
+	.md-padx-1x {
+		--pad-x: 3rem;
+	}
+	.md-padx-2x {
+		--pad-x: 6rem;
+	}
+	.md-padx-3x {
+		--pad-x: 9rem;
+	}
+	.md-pady-1x {
+		--pad-y: 3rem;
+	}
+	.md-pady-2x {
+		--pad-y: 6rem;
+	}
+	.md-pady-3x {
+		--pad-y: 9rem;
+	}
+}
+
+/* general classes for margin */
+.mgy-05x {
+	margin-top: 0.5rem;
+	margin-bottom: 0.5rem;
+}
+.mgy-01x {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+.mgy-15x {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
+}
+.mgy-20x {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+.mgy-25x {
+	margin-top: 2.5rem;
+	margin-bottom: 2.5rem;
+}
+
+.mgy-30x {
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+}
+
+.md-mgy-05x {
+	--mg-y: 0.5rem;
+	margin-top: var(--mg-y);
+	margin-bottom: var(--mg-y);
+}
+.md-mgy-01x {
+	--mg-y: 1rem;
+	margin-top: var(--mg-y);
+	margin-bottom: var(--mg-y);
+}
+.md-mgy-15x {
+	--mg-y: 1.5rem;
+	margin-top: var(--mg-y);
+	margin-bottom: var(--mg-y);
+}
+.md-mgy-20x {
+	--mg-y: 2rem;
+	margin-top: var(--mg-y);
+	margin-bottom: var(--mg-y);
+}
+
+@media screen and (min-width: 768px) {
+	.md-mgy-05x {
+		--mg-y: 1rem;
+	}
+	.md-mgy-01x {
+		--mg-y: 1.5rem;
+	}
+	.md-mgy-15x {
+		--mg-y: 2rem;
+	}
+	.md-mgy-20x {
+		--mg-y: 2.5rem;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.md-mgy-05x {
+		--mg-y: 1.5rem;
+	}
+	.md-mgy-01x {
+		--mg-y: 2rem;
+	}
+	.md-mgy-15x {
+		--mg-y: 2.5rem;
+	}
+	.md-mgy-20x {
+		--mg-y: 3rem;
+	}
+}
+
+/* buttons general classes */
+.btn {
+	cursor: pointer;
+	display: inline-block;
+	text-align: center;
+	text-transform: capitalize;
+	border: 1px solid transparent;
+	color: inherit;
+	border-radius: 0.375em;
+	padding: 0.5em 1em;
+}
+
+.btn--primary {
+	background-color: var(--color-primary);
+	color: var(--color-white-200);
+	font-weight: 500;
+}
+.btn--primary:hover {
+	background-color: var(--color-pink-700);
+}
+.btn--primary:active {
+	background-color: var(--color-pink-600);
+}
+
+.btn--primary-no-outline {
+	color: var(--color-primary);
+	font-weight: 500;
+	background-color: transparent;
+	padding: 0;
+}
+
+.btn--block {
+	display: block;
+	width: 100%;
+}
+
+.btn--icon-only {
+	--dimen: 4.8rem;
+	width: var(--dimen);
+	height: var(--dimen);
+	padding: 0;
+}
+
+.btn--icon-only-sm {
+	--dimen: 3.5rem !important;
+}
+
+/* border radius general classes*/
+.round-6 {
+	border-radius: 0.6rem;
+}
+
+.rounded-pill {
+	border-radius: 9999px !important;
+}
+
+/* icon  general classes*/
+.icon-sm {
+	--icon-dimen: 2.5rem;
+	width: var(--icon-dimen);
+	height: var(--icon-dimen);
+}
+
+/* general authentication for signup, login and account */
+.gen-auth {
+	min-height: 100vh;
+}
+
+.auth-content {
+	flex: 1;
+	grid-template-columns: min(85%, 400px);
+}
+
+.auth__title {
+	font-size: 3.5rem;
+	font-weight: 500;
+	color: var(--color-primary);
+	margin-bottom: 1em;
+}
+
+.auth-form {
+	gap: 3.8rem;
+	width: 100%;
+}
+
+.auth-side {
+	position: sticky;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100vh;
+	display: none;
+	width: 25%;
+	background-color: var(--color-primary);
+	z-index: 550;
+}
+
+.auth-side img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: left;
+}
+
+@media screen and (min-width: 768px) {
+	.auth-side {
+		display: block;
+	}
+}
+
+/* movies container generalization */
+.movies {
+	--column-count: 2;
+	--card-width: 17rem;
+	grid-template-columns: repeat(
+		var(--column-count),
+		minmax(15rem, var(--card-width))
+	);
+	gap: 5rem 2rem;
+	justify-content: space-between;
+}
+
+@media screen and (min-width: 600px) {
+	.movies {
+		--column-count: 3;
+		column-gap: 4rem;
+	}
+}
+@media screen and (min-width: 860px) {
+	.movies {
+		--column-count: 4;
+		column-gap: 4rem;
+	}
+}
+@media screen and (min-width: 1100px) {
+	.movies {
+		--column-count: 5;
+	}
+}
+
+/* movie component generalization */
+.movie {
+	max-width: var(--card-width);
+	position: relative;
+}
+
+.movie__img {
+	width: 100%;
+	max-width: 220px;
+
+	cursor: pointer;
+}
+
+.movie-content {
+	text-align: center;
+	margin-top: 1rem;
+	padding: 1rem;
+	cursor: pointer;
+}
+
+.movie__name {
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	overflow: hidden;
+}
+
+/* These are movie specific buttons (add and delete) that's why I have put their css here */
+
+.movie .btn--icon-only {
+	position: absolute;
+	right: 0.5rem;
+	top: -0.5rem;
+}
+
+.movie__btn--add {
+	background-color: var(--color-primary);
+}
+
+.movie__btn--add svg {
+	fill: var(--color-white-200);
+}
+
+.movie__btn--add:hover {
+	background-color: var(--color-pink-700);
+}
+
+.movie__btn--add:active {
+	background-color: var(--color-pink-600);
+}
+
+.movie__btn--delete {
+	background-color: var(--color-bright-red-100);
+}
+
+.movie__btn--delete svg {
+	fill: var(--color-white-200);
+}
+
+.movie__btn--delete:hover {
+	background-color: var(--color-bright-red-200);
+}
+.movie__btn--delete:active {
+	background-color: var(--color-bright-red-300);
+}
+
+/* psudo element */
+.no-after::after {
+	content: none;
+}
+
+/* general flex and grid classes */
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.grid {
+	display: grid;
+}
+
+.align-cc {
+	align-content: center;
+}
+
+.align-ic {
+	align-items: center;
+}
+
+.justify-cc {
+	justify-content: center;
+}
+
+.justify-ic {
+	justify-items: center;
+}
+
+.justify-btw {
+	justify-content: space-between;
+}
+
+/* general position classes */
+.absolute {
+	position: absolute;
+}
+
+.fixed {
+	position: fixed;
+}
+
+/* general position layouts */
+
+.bottom-0 {
+	bottom: 0;
+}
+
+.left-0 {
+	left: 0;
+}
+
+.left-50x {
+	left: 50%;
+}
+
+.top-0 {
+	top: 0;
+}
+
+.top-50x {
+	top: 50%;
+}
+
+.right-0 {
+	right: 0;
+}
+
+.abs-gen-self-center {
+	transform: translateX(-50%) translateY(-50%);
+}
+
+/* show and hidden */
+
+.hidden {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+/* disabled */
+.disabled {
+	pointer-events: none;
+	cursor: auto;
+	opacity: 0.8;
+}
